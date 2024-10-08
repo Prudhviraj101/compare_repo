@@ -1,0 +1,870 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackside+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Slackside+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background:rgb(6, 6, 6);
+}
+
+
+/* navbar */
+
+#navbar_main{
+    display: flex;
+    transform: translatey(30px);
+}
+
+#logo{
+    font-size: 50px;
+    transform: translatex(35px);
+}
+#logo_link{
+    color: white;
+}
+
+.navbar_list{
+    display: flex;
+    list-style-type: none;
+    font-family: "Barlow", sans-serif;
+    justify-content: center;
+    gap: 45px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar_li{
+    color: rgb(243, 243, 243);
+    text-decoration: none;
+}
+
+
+#list{
+    position: absolute;
+    right: 10%;
+}
+
+#nav_hme::before,#nav_sig::before,#nav_log::before,#nav_abt::before,#nav_cnt::before,#nav_lot::before{
+    content: '';
+    background: white;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    transform: translatey(20px);
+    transition: .2s;
+}
+
+#nav_hme:hover:before{
+    width: 45px;
+    transition: .2s;
+}
+#nav_sig:hover:before{
+    width: 65px;
+    transition: .2s ;
+}
+#nav_log:hover:before{
+    width: 48.5px;
+    transition: .2s;
+}
+#nav_abt:hover:before{
+    width: 83px;
+    transition: .2s;
+}
+#nav_cnt:hover:before{
+    width: 100px;
+    transition: .2s;
+}
+#nav_lot:hover:before{
+    width: 64.5px;
+    transition: .2s;
+}
+
+#weblogo{
+    width: 65px;
+}
+
+#user{
+    background: whitesmoke;
+    border-radius: 50%;
+    font-size: 60px;
+    position: absolute;
+    right: 3%;
+    height: 60px;
+    margin-top: -10px;
+}
+
+#userinfo{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    right: 2%;
+    transform: translate(10px,80px);
+    font-family: "Nunito", sans-serif;
+    border: solid whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#userinfo::after{
+    content: '';
+    position: absolute;
+    border: solid whitesmoke;
+    width: 20px;
+    height: 20px;
+    top: -13.5%;
+    transform: rotate(45deg);
+    right: 12%;
+    background: rgb(6, 6, 6);
+    border-bottom:solid rgb(6, 6, 6);
+    border-right:solid rgb(6, 6, 6);
+    border-radius: 3px;
+}
+
+#noinfo{
+    display: none;
+}
+
+
+
+/* homepage */
+
+#homepage_main{
+    position: relative;
+/*     border: solid white; */
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#homepage_main p{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing:4px;
+    font-size: 60px;
+    font-weight: bold;
+    width: 50px;
+    float: left;
+    margin-left: 20px;
+}
+
+#search_main{
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    width: 40%;
+}
+
+#search{
+    position: relative;
+/*     border: solid red; */
+}
+
+/* .search_bar{
+} */
+
+.home_input{
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding:0 15px 5px 55px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    font-family: "Nunito", sans-serif;
+    outline:none;
+    z-index: -1;
+}
+
+#search_icon{
+    font-size: 25px;
+    float: left;
+    transform: translate(15px,43px);
+    z-index: 1;
+}
+
+#suggest{
+    color: rgb(255, 255, 255);
+    width: 80%;
+    margin-left: 40px;
+    background: whitesmoke;
+    border-radius:0 0 6px 6px;
+}
+
+#items{
+    text-decoration: none;
+}
+
+#item1{
+    color: black;
+    font-family: nunito;
+    font-weight: bold;
+    padding: 5px 0 5px 15px;
+    border-radius:6px;
+}
+#item1:hover{
+    background: rgb(203, 203, 203);
+}
+#item2{
+    color: black;
+    font-family: nunito;
+    font-weight: bold;
+    padding: 5px 0 5px 15px;
+    border-radius:6px;
+    background: rgb(203, 203, 203);
+}
+
+
+
+/* signup */
+
+#signup_main {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    border: solid whitesmoke;
+    width: 310px;
+    height: 340px;
+    animation: fadeIn 1s ease-out forwards;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: 150px;
+}
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+
+#signup_main h2{
+    letter-spacing: 5px;
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+}
+
+.input::placeholder{
+    font-weight: bold;
+    color: black;
+}
+
+#input1,#input3{
+    margin-top: 15px;
+    transform: perspective(400px) rotatey(35deg);
+}
+
+#input2{
+    transform: perspective(450px) rotatey(-30deg);
+    text-align: right;
+    padding-right: 10px;
+}
+
+#input3{
+    margin-top: -5px;
+}
+
+#signup_btn{
+    border-radius: 10px;
+    border: none;
+    background: blue;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    width: 100px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+#signup_check{
+    transform: translate(105px,-25px);
+}
+
+
+/* Login */
+
+#login_main{
+    text-align: center;
+    border: solid whitesmoke;
+    width: 310px;
+    height: 340px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 2px rgb(98, 98, 98);
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    color: white;
+    font-family: "Nunito", sans-serif;
+}
+
+#login_main input{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: solid white;
+    color: white;
+    font-size: 18px;
+    width: 260px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+#login_usr{
+    margin-top: 20px;
+}
+#login_pwd{
+    margin-top: 40px;
+}
+#login_main input::placeholder{
+    color: whitesmoke;
+}
+
+#login_head{
+    color: white;
+    font-family: "Lexend", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+#login_link{
+    text-decoration: none;
+    color: white;
+}
+
+#login_fp{
+    font-size: 11px;
+    transform: translate(85px,-5px);
+}
+
+#login_btn{
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(blue,purple);
+    color: white;
+    height: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 80px;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+}
+
+#login_check{
+    transform: translate(120px,-25px);
+}
+
+
+
+/* Categories */
+
+#categoriesmain{
+    margin-top: 50px;
+}
+
+#ctg_head{
+    font-family: "Madimi One", sans-serif;
+    color: whitesmoke;
+    font-size: 50px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    text-align: center;
+    transform: translatey(-30px);
+}
+#ctg_main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+#mobile{
+    position: relative;
+    border: solid rgb(126, 157, 228);
+    background: linear-gradient(rgb(126, 157, 228) 50%,black 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+}
+#mobile img{
+    width: 200px;
+    transform: translate(-15px,-3px);
+}
+#mobile label{
+    font-size: 28px;
+    float: right;
+    transform: translate(-40px,-90px);
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+#laptop{
+    position: relative;
+    border: solid rgb(75, 74, 125);
+    background: linear-gradient(black 50%,rgb(75, 74, 125) 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+}
+#laptop img{
+    position: absolute;
+    left: 0px;
+    width: 200px;
+}
+#laptop label{
+    position: absolute;
+    font-size: 28px;
+    right: 30px;
+    top: 30px;
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+#camera{
+    border: solid rgb(137, 137, 160);
+    background: linear-gradient(rgb(137, 137, 160) 50%,black 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+
+}
+#camera img{
+    width: 160px;
+    transform: translate(8px,9px);
+}
+#camera label{
+    font-size: 28px;
+    float: right;
+    transform: translate(-20px,130px);
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+#headset{
+    border: solid rgb(198, 42, 97);
+    background: linear-gradient(black 50%,rgb(198, 42, 97) 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+}
+#headset img{
+    width: 180px;
+    transform: translate(-0px,7px);
+}
+#headset label{
+    font-size: 28px;
+    float: right;
+    transform: translate(-20px,-150px);
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+#watch{
+    position: relative;
+    border: solid rgb(172, 171, 180);
+    background: linear-gradient(rgb(172, 171, 180) 50%,black 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+}
+#watch img{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 200px;
+    transform: rotate(18deg);
+}
+#watch label{
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+    font-size: 28px;
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+
+#speaker{
+    border: solid rgb(44, 43, 71);
+    background: linear-gradient(black 50%,rgb(44, 43, 71) 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+}
+#speaker img{
+    width: 200px;
+    transform: translate(-20px,-5px);
+}
+#speaker label{
+    font-size: 28px;
+    float: right;
+    transform: translate(-20px,-175px);
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+#tablet{
+    position: relative;
+    border: solid rgb(46, 45, 89);
+    background: linear-gradient(rgb(46, 45, 89) 50%,black 50%);
+    width: 280px;
+    height: 200px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 15px;
+}
+#tablet img{
+    width: 210px;
+    position: absolute;
+    top: -10px;
+}
+#tablet label{
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    font-size: 28px;
+    font-family: "Caveat Brush", cursive;
+    color: rgb(255, 255, 255);
+}
+
+
+/* product */
+
+#loop{
+    position: absolute;
+    z-index: -1;    
+}
+
+#loopmain{
+    display: inline-block;
+    transition: .3s;
+}
+
+#pdtmain{
+    margin: 50px 0 0 43px;
+    display: flex;
+    color: white;
+    transition: .3s;
+}
+
+#pdtimg{
+    width: 190px;
+    height: 250px;
+}
+
+#pdttxt{
+    width: 160px;
+    font-family: "Freeman", sans-serif;
+    font-size: 20px;
+}
+
+#pdttxt2,#pdttxt3,#pdttxt4,#pdttxt5{
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    width: 120px;
+}
+
+#mobiletxt{
+    position: relative;
+    padding: 12px 0 0 10px;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    border-right: solid whitesmoke;
+    border-top: solid;
+    border-bottom: solid;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 175px;
+    height: auto;
+}
+
+#pdttxt2,#pdttxt3,#pdttxt4{
+    padding-left: 10px;
+}
+
+#pdttxt5{
+    padding-left:11px;
+}
+
+#storage,#chip,#screen{
+    padding-bottom: 10px;
+    display: flex;
+}
+#chip,#battery{
+    display: flex;
+    padding-left: 2px;
+}
+
+#ramicon{
+    padding-top: 5px;
+    font-size: 20px;
+}
+#chipicon,#baticon{
+    font-size: 17px;
+}
+#displayicon{
+    padding-top: 5px;
+    font-size: 23px;
+}
+
+#mobiletxt button{
+    position: absolute;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    margin-left: 30px;
+    background: transparent;
+    border: solid;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 3px 0;
+    bottom: 7px;
+    transition: .3s;
+}
+#mobiletxt button:hover{
+    background-color:white;
+    color: black;
+    border: solid white;
+    transition: .3s;
+}
+
+#comaprebtndiv{
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 1;
+}
+
+#comparebtn{
+    display: none;
+    color: whitesmoke;
+    border: none;
+    background: blue;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px -10px white;
+    float: right;
+    margin-right: 20px;
+}
+
+#comparebtn::before{
+    position: absolute;
+    content: '';
+    border: solid;
+    right: 30px;
+    margin-top: -31.80px;
+    border-top: none;
+    border-left: none;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background:rgb(6, 6, 6);
+    /* transform: rotate(45deg) translate(120px,-104px); */
+}
+
+@media only screen and (max-width: 768px) {
+    #comparebtn {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+#mobiless{
+    display: none;
+    background:rgb(6, 6, 6);
+    color: white;
+    border: solid;
+    height: 90px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-family: "Fira Sans", sans-serif;
+}
+
+
+
+#key1{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    padding:0 6px;
+}
+
+#keyname1,#keyname2{
+    font-size: 20px;
+    padding-left: 5px;
+    float: left;
+}
+
+#rmv1{
+    display: none;
+}
+#rmv2{
+    display: none;
+}
+
+#rmv1,#rmv2{
+    position: relative;
+    margin: 2px 0 0 10px;
+    float: right;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: .2s;
+}
+#rmv1:hover,#rmv2:hover{
+    color: black;
+    background: white;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+
+/* compare */
+
+#mobilediv1{
+    color: white;
+}
+
+#mobilediv1 img{
+    width: 320px;
+    height: 400px;
+}
+
+#mobilediv1 h2{
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+#mobilediv1 h3{
+    font-family: "Open Sans", sans-serif;
+    width: 400px;
+}
+
+#linediv{
+    position: absolute;
+    border: 1px solid whitesmoke;
+    height: 100%;
+    width: 0px;
+}
+
+#mainmobilediv{
+    transform: translateY(20px);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+
+
+/* Responsive */
+
+@media (max-width:680px){
+    .navbar_list{
+        gap: 20px;
+        transition: .2s;
+        margin-right: 10px;
+    }
+
+    #search_main{
+        margin: 50% 0 0 -70px;
+        transition: .3s;
+    }
+
+    .home_input{
+        width: 350px;
+        transition: .3s;
+    }
+
+    #search_icon{
+        transition: .3s;
+    }
+
+    #homepage_main p{
+        letter-spacing:4px;
+        font-size: 50px;
+        width: 450px;
+        transform: translate(25px,20px);
+        transition: .3s;
+    }
+
+    #signup_main,#login_main{
+        right: 20%;
+    }
+
+    #user{
+        font-size: 40px;
+        height: 40px;
+        margin-top: 3px;
+    }
+}
+
+@media (max-width:550px){
+    .navbar_list{
+        gap: 15px;
+        transition: .2s;
+        margin-right: 15px;
+    }
+
+    #logo{
+        transform: translatex(10px);
+        transition: .2s;
+    }
+
+    #weblogo{
+        width: 50px;
+        transition: .2s;
+    }
+}
